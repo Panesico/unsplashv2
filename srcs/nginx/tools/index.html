@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <!-- Login Button -->
+      <button id="login">Log in with Unsplash</button>
+    </div>
+    
+    <!-- Search Bar -->
+    <div class="header-section search-bar">
+      <input type="text" id="query" placeholder="Search for photos">
+      <button id="search-button">Search</button>
+    </div>
+    
+    <!-- Favorites Button -->
+    <div class="header-section">
+      <button id="favorites" style="display: none;">My favorites</button>
+    </div>
+  </header>
+    <main id="gallery">
+        <p>Loading photos...</p>
+    </main>
+    <footer>
+        <p>&copy; 2024</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
