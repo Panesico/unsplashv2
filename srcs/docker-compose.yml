@@ -1,0 +1,33 @@
+name: unsplash
+
+services:
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    image: nginx
+    container_name: nginx
+    ports:
+      - 8443:8443
+    env_file:
+      - .env
+    networks:
+      - unsplash
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: backend
+    container_name: backend
+    ports:
+      - 3000:3000
+    env_file:
+      - .env
+    networks:
+      - unsplash
+
+
+networks:
+  unsplash:
+    name: unsplash
+    driver: bridge
